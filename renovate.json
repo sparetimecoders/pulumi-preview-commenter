@@ -1,0 +1,77 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "configMigration": true,
+  "extends": [
+    "config:recommended",
+    "docker:pinDigests",
+    "helpers:pinGitHubActionDigests",
+    ":pinDevDependencies"
+  ],
+  "baseBranches": [
+    "main"
+  ],
+  "rebaseWhen": "conflicted",
+  "labels": [
+    "dependencies"
+  ],
+  "automergeStrategy": "merge-commit",
+  "automergeType": "branch",
+  "prConcurrentLimit": 0,
+  "prHourlyLimit": 0,
+  "packageRules": [
+    {
+      "extends": [
+        "monorepo:aws-sdk-go-v2"
+      ],
+      "groupName": "aws-sdk-go-v2 monorepo"
+    },
+    {
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true,
+      "schedule": [
+        "every weekend after 4am"
+      ],
+      "matchPackageNames": [
+        "/golang/"
+      ]
+    },
+    {
+      "matchManagers": [
+        "dockerfile"
+      ],
+      "versioning": "regex:^(?<compatibility>[a-z]+?)-(?<minor>\\d+)?-[a-z]+?$",
+      "automerge": true,
+      "schedule": [
+        "every weekend after 4am"
+      ],
+      "matchPackageNames": [
+        "/debian/"
+      ]
+    },
+    {
+      "matchManagers": [
+        "github-actions"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true,
+      "schedule": [
+        "every weekend after 4am"
+      ]
+    }
+  ],
+  "postUpdateOptions": [
+    "gomodTidy"
+  ],
+  "pre-commit": {
+    "enabled": true
+  }
+}

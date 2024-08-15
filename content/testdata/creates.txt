@@ -1,0 +1,20 @@
+Previewing update (dev):
+  pulumi:pulumi:Stack: (same)
+    [urn=urn:pulumi:dev::vehicle-backend-services-infra::pulumi:pulumi:Stack::vehicle-backend-services-infra-dev]
+    + aws:s3/bucket:Bucket: (create)
+        [urn=urn:pulumi:dev::vehicle-backend-services-infra::aws:s3/bucket:Bucket::my-bucket2]
+        [provider=urn:pulumi:dev::vehicle-backend-services-infra::pulumi:providers:aws::default_6_49_0::657d1126-bf9c-429a-91e9-0dc3122588e5]
+        acl         : "private"
+        bucket      : "626635447670-peter-test2"
+        forceDestroy: false
+        tags        : {
+            a  : "b"
+            env: "1dev"
+        }
+        tagsAll     : {
+            a  : "b"
+            env: "1dev"
+        }
+Resources:
+    + 1 to create
+    2 unchanged
