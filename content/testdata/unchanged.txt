@@ -1,0 +1,5 @@
+Previewing update (dev):
+  pulumi:pulumi:Stack: (same)
+    [urn=urn:pulumi:dev::vehicle-backend-services-infra::pulumi:pulumi:Stack::vehicle-backend-services-infra-dev]
+Resources:
+    2 unchanged

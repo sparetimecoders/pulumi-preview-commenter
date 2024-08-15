@@ -1,0 +1,3 @@
+{
+  "extends": ["github>producttale/renovate-config"]
+}
