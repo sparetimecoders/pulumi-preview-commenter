@@ -1,0 +1,15 @@
+name: lint commit messages
+permissions: read-all
+
+on: [pull_request]
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@baa1b236f990293a1b2d94c19e41c2313a85e749 # v6
+        with:
+          configFile: "./.github/commitlint.config.mjs"
