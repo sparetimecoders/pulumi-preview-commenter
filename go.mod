@@ -4,7 +4,7 @@ go 1.22.6
 
 require (
 	github.com/Masterminds/sprig/v3 v3.3.0
-	github.com/alecthomas/kong v0.9.0
+	github.com/alecthomas/kong v1.2.1
 	github.com/google/go-querystring v1.1.0
 	github.com/stretchr/testify v1.9.0
 )
