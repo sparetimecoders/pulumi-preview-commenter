@@ -7,7 +7,7 @@
     "helpers:pinGitHubActionDigests",
     ":pinDevDependencies"
   ],
-  "baseBranches": [
+  "baseBranchPatterns": [
     "main"
   ],
   "rebaseWhen": "conflicted",
