@@ -6,7 +6,7 @@ toolchain go1.25.7
 
 require (
 	github.com/Masterminds/sprig/v3 v3.3.0
-	github.com/alecthomas/kong v1.13.0
+	github.com/alecthomas/kong v1.14.0
 	github.com/google/go-querystring v1.2.0
 	github.com/stretchr/testify v1.11.1
 )
