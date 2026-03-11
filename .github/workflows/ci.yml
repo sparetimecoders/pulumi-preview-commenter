@@ -51,7 +51,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
-      - uses: opzkit/godeadcode-action@6306bf65dfdc77ec1b65f7a162920a8925b1594d # v1
+      - uses: opzkit/godeadcode-action@60c13a1b0b54d78b4f535ad887ec038682ca7736 # v1
         with:
           go-version-file: 'go.mod'
           check-latest: 'true'
