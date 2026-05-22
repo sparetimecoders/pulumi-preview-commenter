@@ -104,7 +104,7 @@ func (c *BitbucketClient) Do(ctx context.Context, req *http.Request, v any) (*ht
 
 func addOptions(originalUrl string, opts any) (string, error) {
   v := reflect.ValueOf(opts)
-  if v.Kind() == reflect.Ptr && v.IsNil() {
+  if v.Kind() == reflect.Pointer && v.IsNil() {
     return originalUrl, nil
   }
 
